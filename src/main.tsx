@@ -3,9 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import AllRoutes from "./routes/AllRoutes.tsx";
+import { BuilderProvider } from "./context/BuilderContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <AllRoutes />
+    <BuilderProvider>
+      <AllRoutes />
+    </BuilderProvider>
   </StrictMode>
 );
